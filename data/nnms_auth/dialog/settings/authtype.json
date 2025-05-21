@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Configure Dialog Authentication Type",
+  "external_title": "Set Dialog Authentication Type...",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Choose authentication type to be used by the datapack"
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        "built-in",
+        {
+          "text": " >> ",
+          "color": "dark_gray"
+        },
+        {
+          "text": "datapack will use its own authentication method (limited)",
+          "color": "gray"
+        }
+      ]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        "mod",
+        {
+          "text": " >> ",
+          "color": "dark_gray"
+        },
+        {
+          "text": "datapack will use authentication and commands provided by mods and server plugins instead",
+          "color": "gray"
+        }
+      ]
+    }
+  ],
+  "can_close_with_escape": true,
+  "on_cancel": {
+    "action": "show_dialog",
+    "dialog": "nnms_auth:settings/main"
+  },
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "pw1",
+      "width": 200,
+      "label": "Enter your password:"
+    }
+  ],
+  "actions": [
+    {
+      "label": "built-in",
+      "tooltip": "Datapack will use its own authentication method (limited)",
+      "width": 100,
+      "on_click": {
+        "action": "run_command",
+        "command": "function nnms_auth:core/authtypeedit {type:0}"
+      }
+    },
+    {
+      "label": "mod",
+      "tooltip": "Datapack will use authentication and commands provided by mods and server plugins instead",
+      "width": 100,
+      "on_click": {
+        "action": "run_command",
+        "command": "function nnms_auth:core/authtypeedit {type:1}"
+      }
+    }
+  ]
+}

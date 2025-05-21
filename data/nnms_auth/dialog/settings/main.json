@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:dialog_list",
+  "title": "NAuth Settings",
+  "external_title": "NAuth Settings...",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Configure the NAuth datapack here."
+    }
+  ],
+  "dialogs": "#nnms_auth:settings",
+  "button_width": 200
+}

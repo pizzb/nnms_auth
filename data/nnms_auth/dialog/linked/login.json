@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:multi_action_input_form",
+  "title": "Login",
+  "external_title": "Login",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Please enter the password associated with this server account to continue."
+    }
+  ],
+  "can_close_with_escape": true,
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "pw1",
+      "width": 200,
+      "label": "Enter your password:"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Login",
+      "id": "yes",
+      "on_submit": {
+        "type": "minecraft:command_template",
+        "template": "login $(pw1)"
+      }
+    },
+    {
+      "label": "Cancel",
+      "id": "no",
+      "on_submit": {
+        "type": "minecraft:command_template",
+        "template": "trigger $()nnmsauth_switchdialog set 1"
+      }
+    }
+  ]
+}

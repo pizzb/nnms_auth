@@ -1,0 +1,1 @@
+$execute as @s run function nnms_auth:core/authorize2 with storage minecraft:nnms_auth sessions."$(UUID)"

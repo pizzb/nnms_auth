@@ -1,0 +1,1 @@
+dialog show @s nnms_auth:settings/authtype

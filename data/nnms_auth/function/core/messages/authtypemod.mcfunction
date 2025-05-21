@@ -1,0 +1,1 @@
+$tellraw @s [$(prefix),{"text":"Dialog authentication type is now set to: mod","color":"white"}]

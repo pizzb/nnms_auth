@@ -1,0 +1,1 @@
+$tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",$(prefix),["Please log in to your server account by clicking ",{"text":"here","color":"red","bold":true,"underlined":true,"click_event":{"action":"run_command","command":"trigger nnmsauth_switchdialog set 3"}},"."]]

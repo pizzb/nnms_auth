@@ -1,0 +1,1 @@
+$tellraw @s [$(prefix),{"text":"Logout location particles is now set to: false","color":"white"}]

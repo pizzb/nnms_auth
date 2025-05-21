@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:simple_input_form",
+  "title": "Configure Dialog Authentication Prefix",
+  "external_title": "Set Prefix...",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Enter a text component object to serve as the prefix for all authentication messages."
+    }
+  ],
+  "can_close_with_escape": true,
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "t",
+      "width": 200,
+      "label": "Edit message prefix:",
+      "initial": "[{\"text\":\"[\",\"color\":\"dark_gray\"},{\"text\":\"NAuth\",\"color\":\"blue\"},{\"text\":\"]\",\"color\":\"dark_gray\"},{\"text\":\" \",\"color\":\"white\"}]",
+      "max_length": 512,
+      "multiline": {
+        "height": 512
+      }
+    }
+  ],
+  "action": {
+    "label": "Done",
+    "id": "login",
+    "on_submit": {
+      "type": "minecraft:command_template",
+      "template": "function nnms_auth:core/prefixedit {root:[$(t)]}"
+    }
+  }
+}

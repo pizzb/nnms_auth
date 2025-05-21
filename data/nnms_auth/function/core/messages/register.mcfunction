@@ -1,0 +1,1 @@
+$tellraw @s ["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",$(prefix),{"text":"Successfully registered!","color":"white"}]

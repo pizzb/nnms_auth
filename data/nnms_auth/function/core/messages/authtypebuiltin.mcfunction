@@ -1,0 +1,1 @@
+$tellraw @s [$(prefix),{"text":"Dialog authentication type is now set to: built-in","color":"white"}]

@@ -1,0 +1,7 @@
+{
+    "values": [
+        "nnms_auth:settings/prefix",
+        "nnms_auth:settings/tll",
+        "nnms_auth:settings/gamemode"
+    ]
+}

@@ -1,0 +1,1 @@
+$tellraw @s [$(prefix),{"text":"Default game mode is now set to: survival","color":"white"}]

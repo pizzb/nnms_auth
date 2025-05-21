@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Configure Default Game Mode",
+  "external_title": "Set Default Game Mode...",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Choose a gamemode that will be set for players as soon as they log in."
+    }
+  ],
+  "can_close_with_escape": true,
+  "on_cancel": {
+    "action": "show_dialog",
+    "dialog": "nnms_auth:settings/main"
+  },
+  "actions": [
+    {
+      "label": "creative",
+      "tooltip": "Start players in creative mode when they log in",
+      "width": 100,
+      "on_click": {
+        "action": "run_command",
+        "command": "function nnms_auth:core/gamemodeedit {mode:0}"
+      }
+    },
+    {
+      "label": "survival",
+      "tooltip": "Start players in survival mode when they log in",
+      "width": 100,
+      "on_click": {
+        "action": "run_command",
+        "command": "function nnms_auth:core/gamemodeedit {mode:1}"
+      }
+    },
+    {
+      "label": "adventure",
+      "tooltip": "Start players in adventure mode when they log in",
+      "width": 100,
+      "on_click": {
+        "action": "run_command",
+        "command": "function nnms_auth:core/gamemodeedit {mode:2}"
+      }
+    },
+    {
+      "label": "spectator",
+      "tooltip": "Start players in spectator mode when they log in",
+      "width": 100,
+      "on_click": {
+        "action": "run_command",
+        "command": "function nnms_auth:core/gamemodeedit {mode:3}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Verify that this is your server account",
+  "external_title": "Login",
+  "body": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": "Register",
+      "tooltip": "This is my first time playing on this server!",
+      "on_click": {
+        "action": "show_dialog",
+        "dialog": "nnms_auth:linked/register"
+      }
+    },
+    {
+      "label": "Login",
+      "tooltip": "I already registered with this server account before!",
+      "on_click": {
+        "action": "show_dialog",
+        "dialog": "nnms_auth:linked/login"
+      }
+    }
+  ]
+}
