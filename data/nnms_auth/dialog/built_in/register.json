@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:simple_input_form",
+  "type": "minecraft:notice",
   "title": "Register",
   "external_title": "Register",
   "body": [
@@ -34,10 +34,10 @@
   ],
   "action": {
     "label": "Register",
-    "id": "register",
-    "on_submit": {
-      "type": "minecraft:command_template",
+    "action": {
+      "type": "dynamic/run_command",
       "template": "trigger register set $(pw1)"
     }
-  }
+  },
+  "pause": false
 }

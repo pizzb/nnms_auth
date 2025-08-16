@@ -37,10 +37,6 @@
     }
   ],
   "can_close_with_escape": true,
-  "on_cancel": {
-    "action": "show_dialog",
-    "dialog": "nnms_auth:settings/main"
-  },
   "inputs": [
     {
       "type": "minecraft:text",
@@ -54,8 +50,8 @@
       "label": "built-in",
       "tooltip": "Datapack will use its own authentication method (limited)",
       "width": 100,
-      "on_click": {
-        "action": "run_command",
+      "action": {
+        "type": "run_command",
         "command": "function nnms_auth:core/authtypeedit {type:0}"
       }
     },
@@ -63,10 +59,11 @@
       "label": "mod",
       "tooltip": "Datapack will use authentication and commands provided by mods and server plugins instead",
       "width": 100,
-      "on_click": {
-        "action": "run_command",
+      "action": {
+        "type": "run_command",
         "command": "function nnms_auth:core/authtypeedit {type:1}"
       }
     }
-  ]
+  ],
+  "pause": false
 }

@@ -8,18 +8,19 @@
     {
       "label": "Register",
       "tooltip": "This is my first time playing on this server!",
-      "on_click": {
-        "action": "show_dialog",
+      "action": {
+        "type": "show_dialog",
         "dialog": "nnms_auth:built_in/register"
       }
     },
     {
       "label": "Login",
       "tooltip": "I already registered with this server account before!",
-      "on_click": {
-        "action": "show_dialog",
+      "action": {
+        "type": "show_dialog",
         "dialog": "nnms_auth:built_in/login"
       }
     }
-  ]
+  ],
+  "pause": false
 }

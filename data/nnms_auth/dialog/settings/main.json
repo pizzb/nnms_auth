@@ -9,5 +9,6 @@
     }
   ],
   "dialogs": "#nnms_auth:settings",
-  "button_width": 200
+  "button_width": 200,
+  "pause": false
 }

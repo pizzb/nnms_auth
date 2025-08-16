@@ -9,17 +9,13 @@
     }
   ],
   "can_close_with_escape": true,
-  "on_cancel": {
-    "action": "show_dialog",
-    "dialog": "nnms_auth:settings/main"
-  },
   "actions": [
     {
       "label": "creative",
       "tooltip": "Start players in creative mode when they log in",
       "width": 100,
-      "on_click": {
-        "action": "run_command",
+      "action": {
+        "type": "run_command",
         "command": "function nnms_auth:core/gamemodeedit {mode:0}"
       }
     },
@@ -27,8 +23,8 @@
       "label": "survival",
       "tooltip": "Start players in survival mode when they log in",
       "width": 100,
-      "on_click": {
-        "action": "run_command",
+      "action": {
+        "type": "run_command",
         "command": "function nnms_auth:core/gamemodeedit {mode:1}"
       }
     },
@@ -36,8 +32,8 @@
       "label": "adventure",
       "tooltip": "Start players in adventure mode when they log in",
       "width": 100,
-      "on_click": {
-        "action": "run_command",
+      "action": {
+        "type": "run_command",
         "command": "function nnms_auth:core/gamemodeedit {mode:2}"
       }
     },
@@ -45,10 +41,11 @@
       "label": "spectator",
       "tooltip": "Start players in spectator mode when they log in",
       "width": 100,
-      "on_click": {
-        "action": "run_command",
+      "action": {
+        "type": "run_command",
         "command": "function nnms_auth:core/gamemodeedit {mode:3}"
       }
     }
-  ]
+  ],
+  "pause": false
 }

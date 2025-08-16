@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:simple_input_form",
+  "type": "minecraft:notice",
   "title": "Configure Dialog Authentication Prefix",
   "external_title": "Set Prefix...",
   "body": [
@@ -24,10 +24,10 @@
   ],
   "action": {
     "label": "Done",
-    "id": "login",
-    "on_submit": {
-      "type": "minecraft:command_template",
+    "action": {
+      "type": "dynamic/run_command",
       "template": "function nnms_auth:core/prefixedit {root:[$(t)]}"
     }
-  }
+  },
+  "pause": false
 }

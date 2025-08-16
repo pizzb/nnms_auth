@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:simple_input_form",
+  "type": "minecraft:notice",
   "title": "Login",
   "external_title": "Login",
   "body": [
@@ -19,10 +19,10 @@
   ],
   "action": {
     "label": "Login",
-    "id": "login",
-    "on_submit": {
-      "type": "minecraft:command_template",
+    "action": {
+      "type": "dynamic/run_command",
       "template": "trigger login set $(pw1)"
     }
-  }
+  },
+  "pause": false
 }

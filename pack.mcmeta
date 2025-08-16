@@ -1,6 +1,10 @@
 {
   "pack": {
     "description": "NNMS Auth Module\nmade by pizzb",
-    "pack_format": 78
+    "pack_format": 81,
+    "supported_formats": [
+      80,
+      81
+    ]
   }
 }

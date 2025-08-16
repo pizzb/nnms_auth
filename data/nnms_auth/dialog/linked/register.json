@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:multi_action_input_form",
+  "type": "minecraft:multi_action",
   "title": "Register",
   "external_title": "Register",
   "body": [
@@ -41,19 +41,18 @@
   "actions": [
     {
       "label": "Register",
-      "id": "yes",
-      "on_submit": {
-        "type": "minecraft:command_template",
+      "action": {
+        "type": "dynamic/run_command",
         "template": "register $(pw1) $(pw2)"
       }
     },
     {
       "label": "Cancel",
-      "id": "no",
-      "on_submit": {
-        "type": "minecraft:command_template",
-        "template": "trigger $()nnmsauth_switchdialog set 1"
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger nnmsauth_switchdialog set 1"
       }
     }
-  ]
+  ],
+  "pause": false
 }

@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:multi_action_input_form",
+  "type": "minecraft:multi_action",
   "title": "Login",
   "external_title": "Login",
   "body": [
@@ -20,19 +20,18 @@
   "actions": [
     {
       "label": "Login",
-      "id": "yes",
-      "on_submit": {
-        "type": "minecraft:command_template",
+      "action": {
+        "type": "dynamic/run_command",
         "template": "login $(pw1)"
       }
     },
     {
       "label": "Cancel",
-      "id": "no",
-      "on_submit": {
-        "type": "minecraft:command_template",
-        "template": "trigger $()nnmsauth_switchdialog set 1"
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger nnmsauth_switchdialog set 1"
       }
     }
-  ]
+  ],
+  "pause": false
 }
