@@ -10,6 +10,8 @@ execute as @a if score @s nnmsauth_switchdialog matches 1 run function nnms_auth
 execute as @a if score @s nnmsauth_switchdialog matches 2 run function nnms_auth:core/showlinkedregister
 execute as @a if score @s nnmsauth_switchdialog matches 3 run function nnms_auth:core/showlinkedlogin
 
+execute as @a if score @s change_password matches 1 run tag @s remove nnms.auth.registered
+
 execute store result storage nnms_auth playernext int 1 run scoreboard players get nnmsauth_playernext nnmsauth_playernext
 execute as @a at @s run function nnms_auth:core/saveplayerlocation with storage minecraft:nnms_auth
 execute as @e[type=marker,tag=nnms.auth.marker] run function nnms_auth:core/checkifplayerexists with entity @s

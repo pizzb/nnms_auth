@@ -40,5 +40,9 @@ $execute if entity @e[type=marker,name=$(CustomName),tag=nnms.auth.out,limit=1] 
 $execute if entity @e[type=marker,name=$(CustomName),tag=nnms.auth.out,limit=1] run gamemode spectator @a[tag=$(CustomName),limit=1]
 
 $execute as @a[tag=$(CustomName),limit=1] unless entity @s[tag=nnms.auth.registered] run function nnms_auth:core/messages/requestregister with storage minecraft:nnms_auth
+$execute as @a[tag=$(CustomName),limit=1] unless entity @s[tag=nnms.auth.registered] run scoreboard players set @s change_password 2
 
 $execute as @a[tag=$(CustomName),limit=1,tag=nnms.auth.registered] if entity @a[tag=$(CustomName),limit=1,tag=nnms.auth.registered] if entity @e[type=marker,name=$(CustomName),tag=nnms.auth.out,limit=1] run function nnms_auth:core/messages/requestlogin with storage minecraft:nnms_auth
+$execute as @a[tag=$(CustomName),limit=1,tag=nnms.auth.registered] if entity @a[tag=$(CustomName),limit=1,tag=nnms.auth.registered] if entity @e[type=marker,name=$(CustomName),tag=nnms.auth.out,limit=1] run scoreboard players set @s change_password 2
+
+$execute as @a[tag=$(CustomName),limit=1,tag=nnms.auth.registered] if entity @a[tag=$(CustomName),limit=1,tag=nnms.auth.registered] unless entity @e[type=marker,name=$(CustomName),tag=nnms.auth.out,limit=1] run scoreboard players set @s change_password 0
