@@ -3,3 +3,4 @@ execute if score nnmsauth_gamemode nnmsauth_gamemode matches ..0 run function nn
 execute if score nnmsauth_gamemode nnmsauth_gamemode matches 1 run function nnms_auth:core/messages/gm1 with storage minecraft:nnms_auth
 execute if score nnmsauth_gamemode nnmsauth_gamemode matches 2 run function nnms_auth:core/messages/gm2 with storage minecraft:nnms_auth
 execute if score nnmsauth_gamemode nnmsauth_gamemode matches 3.. run function nnms_auth:core/messages/gm3 with storage minecraft:nnms_auth
+function nnms_auth:core/messages/backtosettings with storage minecraft:nnms_auth

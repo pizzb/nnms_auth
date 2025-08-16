@@ -1,0 +1,1 @@
+$tellraw @s [$(prefix),[{"text":"Continue to configuring the settings by clicking ","color":"white"},{"text":"here","bold":true,"underlined":true,"color":"red","click_event":{"action":"run_command","command":"function nnms_auth:settings"}},{"text":".","color":"white"}]]
